@@ -45,18 +45,36 @@
                                     <action selector="D8BUttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z98-i4-4MI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BX-qn-FUE">
+                                <rect key="frame" x="165" y="550" width="84" height="30"/>
+                                <state key="normal" title="Next Screen"/>
+                                <connections>
+                                    <segue destination="i1c-7u-ryP" kind="show" id="yMP-k2-u2D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6c-xf-bRA">
+                                <rect key="frame" x="159" y="489" width="97" height="30"/>
+                                <state key="normal" title="Next Screen 2"/>
+                                <connections>
+                                    <action selector="screen3buttonpressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbc-Kc-ZWG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ecs-Ga-yXq" firstAttribute="leading" secondItem="SSX-J5-JF9" secondAttribute="leading" id="0KF-UU-O0j"/>
                             <constraint firstItem="SSX-J5-JF9" firstAttribute="leading" secondItem="YCX-pK-8d8" secondAttribute="leading" id="1Cs-dQ-33b"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1BX-qn-FUE" secondAttribute="bottom" constant="156" id="2AY-H3-ATV"/>
                             <constraint firstItem="ecs-Ga-yXq" firstAttribute="top" secondItem="SSX-J5-JF9" secondAttribute="bottom" constant="8" symbolic="YES" id="6dP-qH-8iA"/>
                             <constraint firstItem="ur3-z0-wuv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="99" id="8h2-ze-Dau"/>
+                            <constraint firstItem="1BX-qn-FUE" firstAttribute="centerX" secondItem="ecs-Ga-yXq" secondAttribute="centerX" id="9ga-M9-OfI"/>
                             <constraint firstItem="ur3-z0-wuv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ED0-Iz-euU"/>
                             <constraint firstItem="SSX-J5-JF9" firstAttribute="top" secondItem="YCX-pK-8d8" secondAttribute="bottom" constant="8" symbolic="YES" id="IKc-xg-H1n"/>
                             <constraint firstItem="YCX-pK-8d8" firstAttribute="centerX" secondItem="ur3-z0-wuv" secondAttribute="centerX" id="Mow-om-u6B"/>
                             <constraint firstItem="ur3-z0-wuv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hgR-gQ-wL9"/>
                             <constraint firstItem="YCX-pK-8d8" firstAttribute="top" secondItem="ur3-z0-wuv" secondAttribute="bottom" constant="13" id="ttI-dD-hf9"/>
+                            <constraint firstItem="n6c-xf-bRA" firstAttribute="centerX" secondItem="1BX-qn-FUE" secondAttribute="centerX" id="vAw-Kf-rFn"/>
+                            <constraint firstItem="1BX-qn-FUE" firstAttribute="top" secondItem="n6c-xf-bRA" secondAttribute="bottom" constant="31" id="yx8-wL-0aO"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -67,6 +85,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1197" y="667"/>
+        </scene>
+        <!--Screen2VC-->
+        <scene sceneID="Ptq-to-NVt">
+            <objects>
+                <viewController id="i1c-7u-ryP" customClass="Screen2VC" customModule="DiceRoller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GIn-lG-8Bc"/>
+                        <viewControllerLayoutGuide type="bottom" id="y1e-m0-8dL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eiJ-DS-cgf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zC5-8h-yQd">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Screen 2" id="EJd-Jw-ANF">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="EnS-V4-eaY">
+                                            <connections>
+                                                <action selector="BackButtonPressed:" destination="i1c-7u-ryP" id="FlS-Be-so3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="few-bC-uZm">
+                                <rect key="frame" x="20" y="126" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="few-bC-uZm" firstAttribute="top" secondItem="zC5-8h-yQd" secondAttribute="bottom" constant="62" id="6Wx-Dc-4Cf"/>
+                            <constraint firstItem="zC5-8h-yQd" firstAttribute="top" secondItem="GIn-lG-8Bc" secondAttribute="bottom" id="GDj-D5-9LO"/>
+                            <constraint firstItem="few-bC-uZm" firstAttribute="leading" secondItem="eiJ-DS-cgf" secondAttribute="leadingMargin" id="XkB-Y1-mqc"/>
+                            <constraint firstItem="few-bC-uZm" firstAttribute="centerX" secondItem="zC5-8h-yQd" secondAttribute="centerX" id="mrs-Rb-uAU"/>
+                            <constraint firstItem="zC5-8h-yQd" firstAttribute="leading" secondItem="eiJ-DS-cgf" secondAttribute="leading" id="tDS-Gn-0ua"/>
+                            <constraint firstAttribute="trailing" secondItem="zC5-8h-yQd" secondAttribute="trailing" id="xNb-zY-Zi5"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="MyLabel" destination="few-bC-uZm" id="Hh3-hT-SU5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAc-jB-wtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1801" y="667"/>
+        </scene>
+        <!--Screen3VC-->
+        <scene sceneID="0wj-XU-BcK">
+            <objects>
+                <viewController storyboardIdentifier="Screen3" id="RIo-0l-4ov" customClass="Screen3VC" customModule="DiceRoller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K0n-2t-oma"/>
+                        <viewControllerLayoutGuide type="bottom" id="4mR-Mt-RDz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AY2-sk-cC8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bA-ih-gGB">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Screen 3" id="fv7-tB-Njs">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="p88-LN-ab7">
+                                            <connections>
+                                                <action selector="BackButtonPressed:" destination="RIo-0l-4ov" id="hJJ-9o-WPU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEh-7F-JG3">
+                                <rect key="frame" x="186" y="92" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nEh-7F-JG3" firstAttribute="centerX" secondItem="0bA-ih-gGB" secondAttribute="centerX" id="5ph-AJ-oA8"/>
+                            <constraint firstAttribute="trailing" secondItem="0bA-ih-gGB" secondAttribute="trailing" id="FM5-bZ-mcE"/>
+                            <constraint firstItem="nEh-7F-JG3" firstAttribute="top" secondItem="0bA-ih-gGB" secondAttribute="bottom" constant="28" id="Pi0-Np-6aV"/>
+                            <constraint firstItem="0bA-ih-gGB" firstAttribute="top" secondItem="K0n-2t-oma" secondAttribute="bottom" id="VMM-zd-FfN"/>
+                            <constraint firstItem="0bA-ih-gGB" firstAttribute="leading" secondItem="AY2-sk-cC8" secondAttribute="leading" id="fdK-aF-6Jr"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="MyLabel" destination="nEh-7F-JG3" id="wd2-zR-O4Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9e-Zf-5d8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501" y="1444"/>
         </scene>
     </scenes>
 </document>

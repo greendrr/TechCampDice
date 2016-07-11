@@ -1,5 +1,5 @@
 //
-//  MainVC.swift
+//  Screen3VC.swift
 //  DiceRoller
 //
 //  Created by Litman, Mike on 7/11/16.
@@ -8,46 +8,28 @@
 
 import UIKit
 
-class MainVC: UIViewController
-    {
+class Screen3VC: UIViewController {
 
+    
     @IBOutlet weak var MyLabel: UILabel!
+    var text2set = ""
     
     override func viewDidLoad()
     {
+       
         super.viewDidLoad()
         
-        
+        self.MyLabel.text = text2set
+
         // Do any additional setup after loading the view.
     }
-    
-    
-    @IBAction func screen3buttonpressed()
+
+    @IBAction func BackButtonPressed(sender: AnyObject)
     {
-    let vc = self.storyboard?.instantiateViewControllerWithIdentifier("Screen3") as! Screen3VC
+        self.dismissViewControllerAnimated(true, completion: nil)
         
-        vc.text2set = self.MyLabel.text!
-        
-        self.presentViewController(vc, animated: true, completion: nil)
     }
-    
-    
-    //D4 button event
-    @IBAction func D4ButtonPressed(sender: AnyObject)
-    {
-        MyLabel.text = "D4"
-    }
-    //D6 button event
-    @IBAction func D6ButtonPressed(sender: AnyObject)
-    {
-        MyLabel.text = "D6"
-    }
-    //D8 button event
-    @IBAction func D8BUttonPressed(sender: AnyObject)
-    {
-        MyLabel.text = "D8"
-    }
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
