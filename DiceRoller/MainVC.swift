@@ -24,8 +24,9 @@ class MainVC: UIViewController
     
     @IBOutlet weak var D20BUtton: UIButton!
     
+    @IBOutlet weak var resultLabel: UILabel!
     
-    @IBOutlet weak var MyLabel: UILabel!
+    @IBOutlet weak var rollText: UITextView!
     
     override func viewDidLoad()
     {
@@ -40,10 +41,56 @@ class MainVC: UIViewController
     {
     let vc = self.storyboard?.instantiateViewControllerWithIdentifier("Screen3") as! Screen3VC
         
-        vc.text2set = self.MyLabel.text!
+        vc.text2set = self.rollText.text!
         
         self.presentViewController(vc, animated: true, completion: nil)
     }
+    
+    @IBAction func DeleteButtonPressed(sender: AnyObject)
+    {
+        let parts = self.rollText.text!.componentsSeparatedByString("+")
+        self.rollText.text = ""
+        for i in 0 ..< parts.count-1
+        {
+            if(self.rollText.text! == "")
+        
+            {
+                self.rollText.text = parts[1]
+            }
+            else
+            {
+                self.rollText.text = "\(self.rollText.text!)+\(parts[i])"
+            }
+        }
+    }
+    
+    @IBAction func RollButtonPressed(sender: AnyObject)
+    {
+        
+        let parts = self.rollText.text!.componentsSeparatedByString("+")
+        var sum = 0
+        for part in parts
+        {
+            if(part != "")
+            {
+            
+            let roll = part.componentsSeparatedByString("D")
+            let sides = Int(roll[1])!
+                let rollResult = self.rolldice(sides)
+                print(rollResult)
+                sum += rollResult
+            }
+        }
+        self.resultLabel.text = "\(sum)"
+    }
+    
+    
+    func rolldice(sides : Int) -> Int
+    {
+        return random() % sides + 1
+        
+    }
+
     
     
     
@@ -54,6 +101,11 @@ class MainVC: UIViewController
         {
             sides = 4
         }
+        else if(sender == self.D6Button)
+        {
+            sides = 6
+        }
+
         else if(sender == self.D8Button)
         {
             sides = 8
@@ -71,8 +123,15 @@ class MainVC: UIViewController
             sides = 20
         }
         
-        self.MyLabel.text = "\(sides)"
         
+       if(self.rollText.text! == "")
+        {
+            self.rollText.text! = "D\(sides)"
+        }
+        else
+        {
+        self.rollText.text = "\(self.rollText.text!)+D\(sides)"
+        }
     }
     
     
@@ -94,7 +153,7 @@ class MainVC: UIViewController
          {
             
             let vc = segue.destinationViewController as! Screen2VC
-            vc.text2set = self.MyLabel.text!
+            vc.text2set = self.rollText.text!
             
             
         }
@@ -109,5 +168,4 @@ class MainVC: UIViewController
         // Pass the selected object to the new view controller.
     }
     
-
 
