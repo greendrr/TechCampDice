@@ -8,16 +8,21 @@
 
 import UIKit
 
-class Screen2VC: UIViewController {
-
+class Screen2VC: UIViewController
+    {
+    
+    var text2set = ""
+    
     @IBOutlet weak var MyLabel: UILabel!
     
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
-        MyLabel.text = "Derek"
+        self.MyLabel.text = text2set
+        
 
         // Do any additional setup after loading the view.
     }

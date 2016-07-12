@@ -11,6 +11,20 @@ import UIKit
 class MainVC: UIViewController
     {
 
+    
+    @IBOutlet weak var D4Button: UIButton!
+    
+    @IBOutlet weak var D6Button: UIButton!
+    
+    @IBOutlet weak var D8Button: UIButton!
+    
+    @IBOutlet weak var D10Button: UIButton!
+    
+    @IBOutlet weak var D12Button: UIButton!
+    
+    @IBOutlet weak var D20BUtton: UIButton!
+    
+    
     @IBOutlet weak var MyLabel: UILabel!
     
     override func viewDidLoad()
@@ -32,20 +46,33 @@ class MainVC: UIViewController
     }
     
     
-    //D4 button event
-    @IBAction func D4ButtonPressed(sender: AnyObject)
+    
+    @IBAction func DiceButtonPressed(sender: UIButton)
     {
-        MyLabel.text = "D4"
-    }
-    //D6 button event
-    @IBAction func D6ButtonPressed(sender: AnyObject)
-    {
-        MyLabel.text = "D6"
-    }
-    //D8 button event
-    @IBAction func D8BUttonPressed(sender: AnyObject)
-    {
-        MyLabel.text = "D8"
+        var sides = -1
+        if(sender == self.D4Button)
+        {
+            sides = 4
+        }
+        else if(sender == self.D8Button)
+        {
+            sides = 8
+        }
+        else if(sender == self.D10Button)
+        {
+            sides = 10
+        }
+        else if(sender == self.D12Button)
+        {
+            sides = 12
+        }
+        else if(sender == self.D20BUtton)
+        {
+            sides = 20
+        }
+        
+        self.MyLabel.text = "\(sides)"
+        
     }
     
     
@@ -55,14 +82,32 @@ class MainVC: UIViewController
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if(segue.identifier != nil)
+        {
+         if(segue.identifier! == "Screen2")
+         {
+            
+            let vc = segue.destinationViewController as! Screen2VC
+            vc.text2set = self.MyLabel.text!
+            
+            
+        }
+            
+            }
+        }
+    
+        
+    
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
-}
+
