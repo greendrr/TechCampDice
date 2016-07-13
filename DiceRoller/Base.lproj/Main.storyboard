@@ -232,6 +232,20 @@
                                     <action selector="DiceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slz-t8-pxe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLh-Pd-Rzq">
+                                <rect key="frame" x="131" y="327" width="153" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="MIj-lV-7IP"/>
+                                    <constraint firstAttribute="width" constant="153" id="mAP-ty-3bP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="Roll">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="RollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpj-lu-t70"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdB-EF-dc3">
                                 <rect key="frame" x="20" y="28" width="374" height="66"/>
                                 <constraints>
@@ -254,23 +268,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-Ak-f2I">
-                                <rect key="frame" x="130" y="609" width="153" height="46"/>
-                                <state key="normal" title="DEL"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q4-xf-4Fc">
+                                <rect key="frame" x="52" y="514" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IJS-Dx-rvi"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="clear-button1"/>
                                 <connections>
-                                    <action selector="DeleteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6i6-2F-GvE"/>
+                                    <action selector="ClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sxh-nm-GDP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLh-Pd-Rzq">
-                                <rect key="frame" x="131" y="327" width="153" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="MIj-lV-7IP"/>
-                                    <constraint firstAttribute="width" constant="153" id="mAP-ty-3bP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <state key="normal" title="Roll"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-Ak-f2I">
+                                <rect key="frame" x="199" y="507" width="153" height="119"/>
+                                <state key="normal" backgroundImage="backspace-button"/>
                                 <connections>
-                                    <action selector="RollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpj-lu-t70"/>
+                                    <action selector="DeleteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6i6-2F-GvE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -287,19 +299,22 @@
                             <constraint firstItem="gLh-Pd-Rzq" firstAttribute="top" secondItem="iWR-y7-eej" secondAttribute="bottom" constant="-123" id="51A-oD-e2K"/>
                             <constraint firstItem="jdB-EF-dc3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="5vF-nh-jv2"/>
                             <constraint firstItem="SSX-J5-JF9" firstAttribute="leading" secondItem="lzQ-a4-BAV" secondAttribute="leading" constant="-1" id="AU8-9g-o59"/>
-                            <constraint firstItem="wIm-Ak-f2I" firstAttribute="top" secondItem="gLh-Pd-Rzq" secondAttribute="bottom" constant="201" id="Hqv-dH-mQe"/>
+                            <constraint firstItem="wIm-Ak-f2I" firstAttribute="top" secondItem="gLh-Pd-Rzq" secondAttribute="bottom" constant="99" id="Hqv-dH-mQe"/>
                             <constraint firstItem="ecs-Ga-yXq" firstAttribute="leading" secondItem="SSX-J5-JF9" secondAttribute="trailing" constant="64" id="MKg-xl-DvX"/>
+                            <constraint firstItem="9q4-xf-4Fc" firstAttribute="leading" secondItem="wIm-Ak-f2I" secondAttribute="leading" constant="-147" id="Nbf-XU-nq6"/>
                             <constraint firstItem="SSX-J5-JF9" firstAttribute="leading" secondItem="YCX-pK-8d8" secondAttribute="trailing" constant="65" id="aaL-89-oGF"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wIm-Ak-f2I" secondAttribute="bottom" constant="32" id="aaq-lM-yg5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wIm-Ak-f2I" secondAttribute="bottom" constant="61" id="aaq-lM-yg5"/>
                             <constraint firstItem="yBV-l1-W5Q" firstAttribute="top" secondItem="lzQ-a4-BAV" secondAttribute="top" constant="-62" id="anA-Iz-yic"/>
-                            <constraint firstItem="wIm-Ak-f2I" firstAttribute="trailing" secondItem="gLh-Pd-Rzq" secondAttribute="trailing" constant="-1" id="apB-Jy-G98"/>
+                            <constraint firstItem="wIm-Ak-f2I" firstAttribute="trailing" secondItem="gLh-Pd-Rzq" secondAttribute="trailing" constant="68" id="apB-Jy-G98"/>
                             <constraint firstItem="lzQ-a4-BAV" firstAttribute="top" secondItem="iWR-y7-eej" secondAttribute="top" constant="62" id="dhd-Xy-mcB"/>
-                            <constraint firstItem="wIm-Ak-f2I" firstAttribute="leading" secondItem="gLh-Pd-Rzq" secondAttribute="leading" constant="-1" id="dv8-Nk-jT7"/>
+                            <constraint firstItem="wIm-Ak-f2I" firstAttribute="leading" secondItem="gLh-Pd-Rzq" secondAttribute="leading" constant="68" id="dv8-Nk-jT7"/>
                             <constraint firstItem="VHw-VX-AIT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="eov-ED-BVP"/>
                             <constraint firstItem="ecs-Ga-yXq" firstAttribute="leading" secondItem="iWR-y7-eej" secondAttribute="leading" id="nP0-Vq-36z"/>
                             <constraint firstItem="jdB-EF-dc3" firstAttribute="trailing" secondItem="VHw-VX-AIT" secondAttribute="trailing" id="pVN-P6-K3a"/>
+                            <constraint firstItem="wIm-Ak-f2I" firstAttribute="top" secondItem="9q4-xf-4Fc" secondAttribute="bottom" constant="-107" id="qKA-Gb-F2n"/>
                             <constraint firstItem="YCX-pK-8d8" firstAttribute="top" secondItem="VHw-VX-AIT" secondAttribute="bottom" constant="63" id="tIW-G4-Lhw"/>
                             <constraint firstItem="lzQ-a4-BAV" firstAttribute="leading" secondItem="yBV-l1-W5Q" secondAttribute="trailing" constant="66" id="tml-PX-QNF"/>
+                            <constraint firstItem="9q4-xf-4Fc" firstAttribute="trailing" secondItem="gLh-Pd-Rzq" secondAttribute="trailing" constant="-132" id="y5i-Xh-6QZ"/>
                             <constraint firstItem="jdB-EF-dc3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zua-Wm-2Ow"/>
                         </constraints>
                     </view>
@@ -429,6 +444,8 @@
         <image name="D-8" width="65" height="65"/>
         <image name="Dice-Icon" width="30" height="30"/>
         <image name="Selected Image" width="16" height="16"/>
+        <image name="backspace-button" width="512" height="512"/>
+        <image name="clear-button1" width="256" height="256"/>
         <image name="home-icon" width="30" height="30"/>
     </resources>
 </document>

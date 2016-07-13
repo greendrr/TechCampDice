@@ -36,6 +36,12 @@ class MainVC: UIViewController
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func ClearButton(sender: AnyObject)
+    {
+        self.rollText.text = ""
+        Core.currentRoll = ""
+        
+    }
     
     @IBAction func screen3buttonpressed()
     {
