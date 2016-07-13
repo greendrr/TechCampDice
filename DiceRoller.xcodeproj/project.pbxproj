@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		478303D41D352C9D00221B76 /* SavedRollList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478303D31D352C9D00221B76 /* SavedRollList.swift */; };
 		478303D61D35380700221B76 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478303D51D35380700221B76 /* Media.xcassets */; };
+		478303D81D3675C000221B76 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478303D71D3675C000221B76 /* Core.swift */; };
+		478303DA1D3677AD00221B76 /* SavedRollsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478303D91D3677AD00221B76 /* SavedRollsVC.swift */; };
+		478303DC1D367DF900221B76 /* SaveRollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478303DB1D367DF900221B76 /* SaveRollVC.swift */; };
 		47E6784E1D33DCD600DA6F89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E6784D1D33DCD600DA6F89 /* AppDelegate.swift */; };
 		47E678531D33DCD600DA6F89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E678511D33DCD600DA6F89 /* Main.storyboard */; };
 		47E678581D33DCD600DA6F89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E678561D33DCD600DA6F89 /* LaunchScreen.storyboard */; };
@@ -39,6 +42,9 @@
 /* Begin PBXFileReference section */
 		478303D31D352C9D00221B76 /* SavedRollList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRollList.swift; sourceTree = "<group>"; };
 		478303D51D35380700221B76 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		478303D71D3675C000221B76 /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		478303D91D3677AD00221B76 /* SavedRollsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRollsVC.swift; sourceTree = "<group>"; };
+		478303DB1D367DF900221B76 /* SaveRollVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveRollVC.swift; sourceTree = "<group>"; };
 		47E6784A1D33DCD600DA6F89 /* DiceRoller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E6784D1D33DCD600DA6F89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E678521D33DCD600DA6F89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 				47E6787D1D33FB8700DA6F89 /* Screen2VC.swift */,
 				47E6787F1D3401EB00DA6F89 /* Screen3VC.swift */,
 				478303D31D352C9D00221B76 /* SavedRollList.swift */,
+				478303D71D3675C000221B76 /* Core.swift */,
+				478303D91D3677AD00221B76 /* SavedRollsVC.swift */,
+				478303DB1D367DF900221B76 /* SaveRollVC.swift */,
 			);
 			path = DiceRoller;
 			sourceTree = "<group>";
@@ -265,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478303D81D3675C000221B76 /* Core.swift in Sources */,
 				47E6787E1D33FB8700DA6F89 /* Screen2VC.swift in Sources */,
+				478303DA1D3677AD00221B76 /* SavedRollsVC.swift in Sources */,
 				47E6787C1D33E14200DA6F89 /* MainVC.swift in Sources */,
+				478303DC1D367DF900221B76 /* SaveRollVC.swift in Sources */,
 				47E678801D3401EB00DA6F89 /* Screen3VC.swift in Sources */,
 				478303D41D352C9D00221B76 /* SavedRollList.swift in Sources */,
 				47E6784E1D33DCD600DA6F89 /* AppDelegate.swift in Sources */,

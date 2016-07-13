@@ -62,6 +62,8 @@ class MainVC: UIViewController
                 self.rollText.text = "\(self.rollText.text!)+\(parts[i])"
             }
         }
+        //our label has been rebuilt
+        Core.currentRoll = self.rollText.text!
     }
     
     @IBAction func RollButtonPressed(sender: AnyObject)
@@ -132,6 +134,8 @@ class MainVC: UIViewController
         {
         self.rollText.text = "\(self.rollText.text!)+D\(sides)"
         }
+        //rolltext has been updated
+        Core.currentRoll = self.rollText.text!
     }
     
     

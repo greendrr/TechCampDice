@@ -8,17 +8,83 @@
 
 import UIKit
 
-class SavedRollList: UITableViewController {
+class SavedRollList: UITableViewController
 
-    override func viewDidLoad() {
+{
+    
+    var rollNames=[String] ()
+    var rollDetails = [String] ()
+
+    
+    
+    override func viewDidLoad()
+    
+    {
+        
+        
         super.viewDidLoad()
-
+        Core.savedRollList = self
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let storedRollNames = defaults.arrayForKey("storedRollNames")
+        let storedRollDetails = defaults.arrayForKey("storedRollDetails")
+        
+        if(storedRollNames != nil)
+        {
+            self.rollNames.appendContentsOf(storedRollNames as! [String])
+            self.rollDetails.appendContentsOf(storedRollDetails as! [String])
+        }
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(self.rollNames, forKey: "storedRollNames")
+        
+        defaults.setObject(self.rollDetails, forKey: "storedRollDetails")
+    }
+    
+    
+    func rolldice(sides : Int) -> Int
+    {
+        return random() % sides + 1
+        
+    }
+    
+    func rollDiceDetails(roll: String)
+    {
+        
+        let parts = roll.componentsSeparatedByString("+")
+        var sum = 0
+        for part in parts
+        {
+            if(part != "")
+            {
+                
+                let roll = part.componentsSeparatedByString("D")
+                let sides = Int(roll[1])!
+                let rollResult = self.rolldice(sides)
+                print(rollResult)
+                sum += rollResult
+            }
+        }
+        //we have our roll stored in sum
+        let vc = UIAlertController(title: "Roll", message: "Result-> \(sum)", preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        
+        vc.addAction(okAction)
+        
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,7 +100,8 @@ class SavedRollList: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        return self.rollNames.count
+        
     }
 
     
@@ -45,10 +112,18 @@ class SavedRollList: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "Test"
-        cell.detailTextLabel?.text = "Name of saved roll"
+        cell.textLabel?.text = self.rollNames[indexPath.row]
+        cell.detailTextLabel?.text = self.rollDetails[indexPath.row]
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        self.rollDiceDetails(self.rollDetails[indexPath.row])
+    }
+    
+    
+    
     
 
     /*
